@@ -1,5 +1,6 @@
-{ lib, pkgs, ... }: {
-  home = {
+{ config, pkgs, ... }:
+
+{
     username = "marco";
     homeDirectory = "/home/marco";
 
@@ -18,6 +19,7 @@
         Bla
     '';
 
-    stateVersion = "25.11";
-  };
+    home.file.".config/blubb/blubb2.conf".source = ./blubb2.conf;
+
+    home.stateVersion = "25.11";
 }
