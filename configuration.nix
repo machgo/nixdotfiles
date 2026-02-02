@@ -117,6 +117,7 @@
     # for winpr-makecert for gnome rdp
     pkgs.freerdp
     pkgs.git
+    pkgs.home-manager
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
