@@ -7,9 +7,16 @@
       cowsay
     ];
 
+    programs.bash.enable = true;
     programs.bash.shellAliases = {
         ll = "ls -la";
     };
+
+    home.file.".config/blubb/blubb.conf".text = ''
+        Bla
+        Blubb
+        Bla
+    '';
 
     stateVersion = "25.11";
   };
