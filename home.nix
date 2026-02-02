@@ -1,10 +1,10 @@
 { config, pkgs, ... }:
 
 {
-    username = "marco";
-    homeDirectory = "/home/marco";
+    home.username = "marco";
+    home.homeDirectory = "/home/marco";
 
-    packages = with pkgs; [
+    home.packages = with pkgs; [
       cowsay
     ];
 
