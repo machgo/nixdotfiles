@@ -16,6 +16,8 @@ in
       gcc
       git
       tmux
+      tree-sitter
+      lazygit
     ];
 
     programs.bash.enable = true;
@@ -36,6 +38,10 @@ in
         source = create_symlink "${dotfiles}/nvim/";
         recursive = true;
     };
+
+    home.file.".tmux.conf".source = create_symlink "${dotfiles}/tmux.conf";
+
+
 
     home.stateVersion = "25.11";
 }
