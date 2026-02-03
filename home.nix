@@ -17,6 +17,7 @@
         Bla
         Blubb
         Bla
+        Bla2
     '';
 
     home.file.".config/blubb/blubb2.conf".source = ./blubb2.conf;
