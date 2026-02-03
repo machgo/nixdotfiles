@@ -108,17 +108,13 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-    pkgs.neovim
-    pkgs.tmux
-    pkgs.openssl
     # for winpr-makecert for gnome rdp
-    pkgs.freerdp
-    pkgs.git
-    pkgs.home-manager
-    pkgs.alacritty
+    freerdp
+
+    alacritty
+    openssl
+    curl
   ];
 
   fonts.packages = with pkgs; [
