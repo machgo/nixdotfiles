@@ -118,6 +118,11 @@
     pkgs.freerdp
     pkgs.git
     pkgs.home-manager
+    pkgs.alacritty
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -148,6 +153,4 @@
   system.stateVersion = "25.11"; # Did you read the comment?
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-
 }
