@@ -34,14 +34,15 @@ in
 
     home.file.".config/blubb/blubb2.conf".source = ./files/blubb2.conf;
 
-    xdg.configFile."nvim" = {
-        source = create_symlink "${dotfiles}/nvim/";
-        recursive = true;
-    };
+    # xdg.configFile."nvim" = {
+    #     source = create_symlink "${dotfiles}/nvim/";
+    #     recursive = true;
+    # };
 
     home.file.".tmux.conf".source = create_symlink "${dotfiles}/tmux.conf";
 
 
+    imports = [ inputs.nvf.nixosModules.default ];
 
     home.stateVersion = "25.11";
 }
