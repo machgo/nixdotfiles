@@ -41,8 +41,5 @@ in
 
     home.file.".tmux.conf".source = create_symlink "${dotfiles}/tmux.conf";
 
-
-    imports = [ inputs.nvf.nixosModules.default ];
-
     home.stateVersion = "25.11";
 }
